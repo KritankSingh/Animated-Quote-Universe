@@ -1,0 +1,88 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at center, #000010, #000000);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#universe-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#cosmic-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+  background: transparent;
+}
+
+#quote-container {
+  position: relative;
+  z-index: 10;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 20, 0.6);
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00ffff;
+  animation: fadeIn 2s ease forwards;
+}
+
+#quote-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  animation: textPulse 4s ease-in-out infinite;
+}
+
+#quote-author {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #88ffff;
+}
+
+#shuffle-stars {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00ffff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffff;
+  transition: background 0.3s ease;
+  z-index: 10;
+}
+
+#shuffle-stars:hover {
+  background: #66ffff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes textPulse {
+  0%, 100% { color: #00ffff; }
+  50% { color: #88ffff; }
+}
+
+/* Additional styles for shooting stars and constellations will be handled in canvas animation */
